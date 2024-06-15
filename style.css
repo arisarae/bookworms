@@ -1,0 +1,908 @@
+/* Fonts */
+@font-face {
+  font-family: "Modern Aesthetic";
+  src: url(./Assets/ModernAesthetic.woff2);
+}
+
+@font-face {
+  font-family: "IM Fell English Regular";
+  src: url(./Assets/IMFellEnglish-Regular.woff2);
+}
+
+@font-face {
+  font-family: "IM Fell English Italic";
+  src: url(./Assets/IMFellEnglish-Italic.woff2);
+}
+
+
+/* Main and Texts */
+body {
+  font-family: "IM Fell English Regular", serif;
+  background-color: #FFF2D8;
+  color: #113946;
+  margin: 0px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Modern Aesthetic", cursive, serif;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0px;
+  text-shadow: 2px 2px 5px #EAD7BB;
+  animation-duration: 3s;
+  animation-name: title;
+}
+
+@keyframes title {
+  from {
+    font-size: 0px;
+  }
+
+  to {
+    font-size: 100px;
+  }
+}
+
+h2 {
+  font-size: 47px;
+  margin: 0px;
+  padding: 85px 0px 30px 0px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 25px;
+  margin: 0px 0px 15px 0px;
+}
+
+p {
+  font-size: 23px;
+  margin: 0px;
+}
+
+
+/* Header */
+header {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: #113946;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+}
+
+a.logo {
+  font-size: 35px;
+  margin: 0px 20px;
+}
+
+
+/* Top Navigation Bar */
+nav {
+  display: flex;
+}
+
+div.nav {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  margin: 13px;
+  color: #FFF2D8;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+/* Side Navigation Bar */
+span {
+  color: #FFF2D8;
+  margin-left: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  width: 0px;
+}
+
+.sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #113946;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sideNav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 23px;
+  color: #FFF2D8;
+  display: block;
+  transition: 0.3s;
+}
+
+.sideNav .closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+}
+
+
+/* Introduction and Join */
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(./Assets/backgroundLibrary.jpg) center;
+  opacity: 0.4;
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+}
+
+#home {
+  padding-top: 70px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  width: 55%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro p {
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #EAD7BB, 0 0 25px black;
+}
+
+#joinUs {
+  width: auto;
+  padding: 35px;
+  background: rgba(188, 163, 127, 0.9);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+/* Form Join */
+div.form {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  width: 115px;
+  font-size: 17px;
+  align-items: center;
+}
+
+input {
+  height: 30px;
+  margin-left: 3px;
+  width: 190px;
+  box-sizing: border-box;
+  border: 2px solid #BCA37F;
+  font-size: 15px;
+}
+
+textarea {
+  margin: 3px;
+  width: 190px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 2px solid #BCA37F;
+  font-size: 15px;
+}
+
+button {
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid #BCA37F;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 311px;
+  background-color: #EAD7BB;
+  color: #113946;
+}
+
+button:focus {
+  background-color: #BCA37F;
+}
+
+#error {
+  margin-top: 20px;
+}
+
+
+/* Explore */
+.explore {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, calc(90%/5));
+  grid-template-rows: repeat(3, 130px);
+  grid-gap: 10px;
+  margin: 0px 5%;
+}
+
+div.genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition-property: filter;
+  transition-duration: 1s;
+}
+
+div.genre:hover {
+  filter: grayscale(0%);
+}
+
+.genreBack {
+  z-index: -1;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 10px;
+}
+
+p.genre {
+  color: #113946;
+  font-family: "Modern Aesthetic";
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px 1px #EAD7BB;
+}
+
+#one {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#one .genreBack {
+  background: url(./Assets/romance.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#two {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+#two .genreBack {
+  background: url(./Assets/children.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+#three {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+#three .genreBack {
+  background: url(./Assets/fantasy.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#four {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+#four .genreBack {
+  background: url(./Assets/scienceFiction.png) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+#five {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+}
+
+#five .genreBack {
+  background: url(./Assets/action.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+#six {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+#six .genreBack {
+  background: url(./Assets/horror.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#seven {
+  grid-column: 4 / 5;
+  grid-row: 2 / 4;
+}
+
+#seven .genreBack {
+  background: url(./Assets/biography.png) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#eight {
+  grid-column: 5 / 6;
+  grid-row: 1 / 4;
+}
+
+#eight .genreBack {
+  background: url(./Assets/moreBooks.jpg) center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+/* Top Books */
+#topBooks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.books {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+div.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 6);
+}
+
+div.books img {
+  border-radius: 5%;
+  height: 250px;
+}
+
+div.books img:hover {
+  transform: scale(1.15);
+}
+
+.books a {
+  margin: 20px 0px;
+  font-size: 18px;
+  color: #113946;
+  text-align: center;
+}
+
+
+/* Movie Recommendation */
+#movieRecs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.movie {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0px;
+}
+
+article {
+  width: 525px;
+}
+
+iframe {
+  width: 525px;
+  height: 300px;
+}
+
+
+/* Footer */
+footer {
+  margin-top: 25px;
+  padding: 40px 10px 10px 10px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #BCA37F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.profile {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+}
+
+p.contact {
+  font-size: 22px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*** Responsive ***/
+/* Tablet */
+@media only screen and (max-width: 1280px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 90px;
+    }
+  }
+
+  div.books {
+    width: calc(100% / 3);
+    margin-bottom: 25px;
+  }
+
+  div.movie {
+    width: 75%;
+    margin: 40px 0px;
+  }
+
+  article {
+    width: 350px;
+  }
+
+  iframe {
+    width: 350px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 75px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .explore {
+    grid-template-columns: repeat(4, calc(90%/4));
+    grid-template-rows: repeat(4, 130px);
+  }
+
+  #eight {
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  div.movie {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 60px;
+    }
+  }
+
+  #home {
+    height: 550px;
+  }
+
+  .background {
+    height: 620px;
+  }
+
+  #joinUs {
+    max-width: 193px;
+  }
+
+  button {
+    width: 203px;
+  }
+
+  textarea {
+    height: 45px;
+  }
+
+  div.movie {
+    width: 85%;
+    margin: 40px 0px;
+  }
+
+  article {
+    width: 325px;
+  }
+
+  iframe {
+    width: 325px;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  div.movie {
+    width: 85%;
+    margin: 40px 0px;
+  }
+
+  article {
+    width: 325px;
+  }
+
+  iframe {
+    width: 45%;
+    height: 160px;
+  }
+
+  p.genre {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 52px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 52px;
+    }
+  }
+
+  span {
+    margin-left: 20px;
+    font-size: 35px;
+    width: auto;
+  }
+
+  .topNav a {
+    font-size: 0px;
+    margin: 0px;
+  }
+
+  .intro {
+    width: 53%;
+  }
+
+  p.genre {
+    font-size: 18px;
+  }
+
+  div.profile {
+    column-gap: 50px;
+  }
+}
+
+/* Phone */
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 78px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 78px;
+    }
+  }
+
+  h2 {
+    padding: 65px 0px 30px 0px;
+    ;
+  }
+
+  header {
+    height: 50px;
+  }
+
+  #home {
+    padding-top: 50px;
+    height: 700px;
+    flex-direction: column;
+  }
+
+  .background {
+    height: 750px;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  #joinUs {
+    margin: 75px 0px 0px 0px;
+    max-width: none;
+  }
+
+  div.form {
+    flex-direction: row;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  button {
+    width: 321px;
+  }
+
+  .explore {
+    grid-template-columns: repeat(2, calc(90%/2));
+    grid-template-rows: repeat(6, 100px);
+  }
+
+  p.genre {
+    font-size: 20px;
+  }
+
+  #five {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+  }
+
+  #six {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  #seven {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+
+  #eight {
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+  }
+
+  div.books {
+    width: calc(100% / 2);
+  }
+
+  div.movie {
+    margin: 20px 0px;
+    flex-direction: column;
+  }
+
+  article {
+    width: 80%;
+  }
+
+  iframe {
+    width: 80%;
+    height: 230px;
+    margin: 15px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 63px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 63px;
+    }
+  }
+
+  iframe {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  article {
+    width: 85%;
+  }
+
+  iframe {
+    width: 85%;
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 55px;
+    }
+  }
+
+  article {
+    width: 85%;
+  }
+
+  iframe {
+    width: 85%;
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  @keyframes title {
+    from {
+      font-size: 0px;
+    }
+
+    to {
+      font-size: 50px;
+    }
+  }
+
+  span {
+    margin-left: 10px;
+    font-size: 25px;
+    width: auto;
+  }
+
+  a.logo {
+    font-size: 26px;
+    margin: 0px 7px;
+  }
+
+  header {
+    height: 42px;
+  }
+
+  #home {
+    padding-top: 42px;
+    height: 600px;
+  }
+
+  .background {
+    height: 642px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  #joinUs {
+    margin: 45px 0px 0px 0px;
+    padding: 20px;
+  }
+
+  input {
+    width: 180px;
+  }
+
+  textarea {
+    height: 100px;
+    width: 180px;
+  }
+
+  button {
+    width: 301px;
+  }
+
+  div.books img {
+    height: 200px;
+  }
+
+  article {
+    width: 90%;
+  }
+
+  iframe {
+    width: 90%;
+    height: 165px;
+    margin: 15px;
+  }
+}
